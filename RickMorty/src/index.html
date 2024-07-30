@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <style>
+        ::-webkit-scrollbar {
+           width: 0vw;
+        }
+   </style>
+    <title>RickMorty</title>
+</head>
+<body id="body" class="w-[100vw] h-[100vh] relative overflow-hidden bg-black text-white font-bold font-mono">
+    <div id="loader" class="bg-black hidden flex justify-center items-center absolute w-[100vw] h-[100vh] ">
+        <img class="w-[5vw] animate-spin" src="../images/loading.png" alt="">
+    </div>
+    <div id="modal" class="absolute z-10 select-none backdrop-blur-[1vw] w-[30vw] max-sm:w-[40vw] hidden  right-0 h-[100vh]">
+        <div id="close" class="bg-red p-[2vw] max-sm:p-[4vw] px-[3vw] flex justify-end">
+            <button class="active:scale-[.95]"><img class="w-[2vw] max-sm:w-[5vw] animate-bounce select-none" src="../images/close.svg" alt=""></button>
+        </div>
+        <div id="modaltxt" class="px-[2vw] text-white flex flex-col gap-[1vw] max-sm:text-[4vw] text-[2vw]">
+            <h1>Perdebaev</h1>
+            <h1>sultaniyaz</h1>
+        </div>
+    </div>
+    <header id="header" class="h-[6vw] max-sm:h-[12vw] bg-[#950101] flex justify-between px-[3vw] items-center">
+        <div>
+            <img class="w-[15vw] max-sm:w-[25vw] rounded-[100%]" src="../images/logo.png" alt="">
+        </div>
+        <div class="flex gap-[2vw] select-none">
+            <button id="dark" class="active:scale-[.95] hidden"><img class="w-[2vw] max-sm:w-[5vw]" src="../images/dark.svg" alt=""></button>
+            <button id="sun" class="active:scale-[.95]"><img class="w-[2vw] max-sm:w-[5vw]" src="../images/sun.svg" alt=""></button>
+            <form id="form" class="flex items-center max-sm:hidden">
+                <input id="search" class="w-[30vw] text-[#3D0000] text-[1.2vw] outline-none rounded-[2vw] px-[1vw] h-[3vw]" type="search" placeholder="search...">
+            </form>
+            <button id="settings" class="active:scale-[.95] ml-[2vw]"><img class="w-[2.5vw] max-sm:w-[5vw]" src="../images/list.svg" alt=""></button>
+        </div>
+    </header>
+    <div id="error" class="h-[100vh] hidden flex justify-center items-center">
+        <img class="w-[20vw] animate-pulse fill-white" src="../images/error.svg" alt="">
+    </div>
+    <section id="cards" class="select-none h-[89vh] rounded-[1vw] max-sm:grid-cols-3 overflow-y-auto grid grid-cols-4 gap-[2vw] px-[3vw] ">
+        <!-- cards -->
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
